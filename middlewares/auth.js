@@ -5,7 +5,7 @@ const Employee = require("../models/employeeModel")
 
 const authorisation=asyncHandler(async (req,res,next)=>{
     try{
-        // const token = req.headers?.auth?.split(" ")[1]
+        
         const token = req.headers?.auth;
         if(!token){
             res.status(404)

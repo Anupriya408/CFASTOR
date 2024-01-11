@@ -15,6 +15,7 @@ const employeeSchema=mongoose.Schema({
     }
 })
 
+// employees
 employeeSchema.pre("saved",async function(next){
     const salt=await bcrypt.genSalt(5)
     const hashedPassword=await bcrypt.hash(this.password,salt)

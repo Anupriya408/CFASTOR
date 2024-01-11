@@ -8,7 +8,7 @@ async function connect() {
     return new Promise((resolve, reject) => {
         mongoose.connect(process.env.MONGODB_URL, (err) => {
             if (err) {
-                console.log('Error in connecting to database')
+                console.log('Error in connecting to database!!')
                 console.log(err);
                 return reject(err);
             }

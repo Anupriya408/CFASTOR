@@ -56,7 +56,6 @@ const loginEmployee=asyncHandler(async (req,res)=>{
     }
  
   
-    // const passwordIsCorrect=await bcrypt.compare(password,employee.password)
     const passwordIsCorrect = password === employee.password;
   
   console.log("generating token");
